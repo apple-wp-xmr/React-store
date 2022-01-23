@@ -1,10 +1,22 @@
-import React from 'react'
-import { useFilterContext } from '../context/filter_context'
-import { BsFillGridFill, BsList } from 'react-icons/bs'
-import styled from 'styled-components'
+import React from 'react';
+import { useFilterContext } from '../context/filter_context';
+import { BsFillGridFill, BsList } from 'react-icons/bs';
+import styled from 'styled-components';
 const Sort = () => {
-  return <h4>sort </h4>
-}
+  const { filtred_products: products, grid_view } = BsFillGridFill();
+  return (
+    <Wrapper>
+      <div className='btn-container'>
+        <button type='button' className={`${grid_view ? 'active' : null}`}>
+          <BsFillGridFill />
+        </button>
+        <button type='button' className={`${!grid_view ? 'active' : null}`}>
+          <BsList />
+        </button>
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -67,6 +79,6 @@ const Wrapper = styled.section`
     font-size: 1rem;
     text-transform: capitalize;
   }
-`
+`;
 
-export default Sort
+export default Sort;
