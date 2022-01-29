@@ -1,1 +1,1 @@
-[project link](react-demo-store-online.netlify.app)
+[project link](https://react-demo-store-online.netlify.app/)
